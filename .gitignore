@@ -1,3 +1,6 @@
+# Environment Files
+.env
+
 # Compiled object files
 *.o
 *.lo
