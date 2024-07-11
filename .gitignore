@@ -1,11 +1,62 @@
-CMakeLists.txt.user
+# Compiled object files
+*.o
+*.lo
+*.la
+*.al
+*.i
+*.ii
+*.ll
+*.s
+*.ko
+*.obj
+*.elf
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.ipa
+*.dSYM
+
+# Debug files
+*.dSYM/
+
+# CMake generated files
+CMakeFiles/
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
 cmake_install.cmake
+Makefile
 install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
+
+# Generated IDE files
+*.idea/
+*.vs/
+*.vscode/
+
+# Build directories
+build/
+bin/
+lib/
+
+# GTK-specific
+*.goutputstream-*
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# System-specific files
+.DS_Store
+Thumbs.db
