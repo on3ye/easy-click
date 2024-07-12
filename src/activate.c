@@ -9,8 +9,8 @@ void activate(GtkApplication* app, gpointer user_data) {
     const char* TITLE = "Easy Click v0.1";
 
     // Window's Geometry: Width & Height
-    const int WIDTH = 600;
-    const int HEIGHT = 400;
+    const int WIDTH = 400;
+    const int HEIGHT = 600;
 
     // Window's Resizable Option
     const gboolean RESIZABLE = FALSE;
