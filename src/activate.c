@@ -3,6 +3,7 @@
 // @title: Main Activation Callback Logic (activate.c)
 
 #include "activate.h"
+#include "gui.h"
 
 void activate(GtkApplication* app, gpointer user_data) {
     // Window's Title: "Easy Click v(*Version*)"
@@ -10,7 +11,7 @@ void activate(GtkApplication* app, gpointer user_data) {
 
     // Window's Geometry: Width & Height
     const int WIDTH = 400;
-    const int HEIGHT = 600;
+    const int HEIGHT = 410;
 
     // Window's Resizable Option
     const gboolean RESIZABLE = FALSE;
@@ -31,4 +32,7 @@ void activate(GtkApplication* app, gpointer user_data) {
 
     gtk_window_present(window);
     printf("GtkWindow created successfully!\n"); // [DEBUG INFO]
+
+    // Render all widgets at the main window
+    render_widgets(window);
 }
