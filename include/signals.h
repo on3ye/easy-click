@@ -1,3 +1,3 @@
 #include <gtk/gtk.h>
 
-void repeat_mode_combo_changed(GtkWidget* w_repeat_mode_combo, GtkWidget* w_number_of_clicks_field);
+void repeat_mode_combo_changed(GtkWidget* repeat_mode_combo, GtkWidget* number_of_clicks_box);
