@@ -14,8 +14,13 @@ LIBS = `pkg-config --libs gtk4`
 
 all: final
 
-final: ${SOURCE_DIR}/main.o ${SOURCE_DIR}/activate.o
-	${CC} ${CFLAGS} ${SOURCE_DIR}/main.o ${SOURCE_DIR}/activate.o -o ${BUILD_DIR}/final ${LIBS}
+final: ${SOURCE_DIR}/main.o ${SOURCE_DIR}/activate.o ${SOURCE_DIR}/gui.o ${SOURCE_DIR}/signals.o
+	${CC} ${CFLAGS} \
+	${SOURCE_DIR}/main.o \
+	${SOURCE_DIR}/activate.o \
+	${SOURCE_DIR}/gui.o \
+	${SOURCE_DIR}/signals.o \
+	-o ${BUILD_DIR}/final ${LIBS}
 	chmod +x ${BUILD_DIR}/final
 
 main.o: ${SOURCE_DIR}/main.c
@@ -23,6 +28,12 @@ main.o: ${SOURCE_DIR}/main.c
 
 activate.o: ${SOURCE_DIR}/activate.c
 	${CC} ${CFLAGS} -c ${SOURCE_DIR}/activate.c ${LIBS}
+
+gui.o: ${SOURCE_DIR}/gui.c
+	${CC} ${CFLAGS} -c ${SOURCE_DIR}/gui.c ${LIBS}
+
+signals.o: ${SOURCE_DIR}/signals.c
+	${CC} ${CFLAGS} -c ${SOURCE_DIR}/signals.c ${LIBS}
 
 clean:
 	rm -f ${BUILD_DIR}/*;
