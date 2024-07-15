@@ -114,11 +114,11 @@ For any inquiries, please contact ``on3ye@proton.me``.
 
 <hr>
 <p align="center">
-    <a href="https://github.com/yourusername/autoclicker">
-        <img src="https://img.shields.io/github/stars/yourusername/autoclicker.svg?style=social" alt="GitHub Stars">
+    <a href="https://github.com/on3ye/easy-click">
+        <img src="https://img.shields.io/github/stars/on3ye/easy-click?style=social" alt="GitHub Stars">
     </a>
-    <a href="https://github.com/yourusername/autoclicker/fork">
-        <img src="https://img.shields.io/github/forks/yourusername/autoclicker.svg?style=social" alt="GitHub Forks">
+    <a href="https://github.com/on3ye/easy-click/fork">
+        <img src="https://img.shields.io/github/forks/on3ye/easy-click?style=social" alt="GitHub Forks">
     </a>
 </p>
 
