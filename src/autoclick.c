@@ -17,7 +17,7 @@
 
         return ;
     }
-#elif defined(__unix__) || defined(__linux__) 
+#elif defined(__unix__)
     void perform_click(Display* display, int button) {
         if (display == NULL) return;    
         XTestFakeButtonEvent(display, button == 0 ? 1 : button == 1 ? 3 : 2, True, CurrentTime);

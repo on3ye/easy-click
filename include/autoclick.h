@@ -13,7 +13,7 @@
     #include <windows.h>
 #elif defined(__APPLE__) || defined(__MACH__)
     #include <ApplicationServices/ApplicationServices.h>
-#elif defined(__unix__) || defined(__linux__) 
+#elif defined(__unix__)
     #include <X11/Xlib.h>
     #include <X11/extensions/XTest.h>
 #endif
