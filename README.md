@@ -1,7 +1,7 @@
 # EasyClick Autoclicker - v0.1
 ![EasyClick](https://img.shields.io/badge/EasyClick-v0.1-green.svg)
 ![GTK](https://img.shields.io/badge/GTK-4.0-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License](https://img.shields.io/badge/License-GPLv3-yellow.svg)
 
 A simple and efficient autoclicker built using GTK4 and C. This project provides a user-friendly graphical interface for automating repetitive mouse clicks, which can be useful for various tasks such as software testing, game automation, and productivity enhancements. The application allows users to customize the interval between clicks, specify the number of clicks to be performed, and choose which mouse button to use. Though this version focuses on Linux, the code structure includes platform-specific sections for potential future expansions to Windows and macOS.
 
