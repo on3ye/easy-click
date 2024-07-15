@@ -96,13 +96,13 @@ git push origin feature-branch
 
 ### Common Issues
 - **Missing Dependencies:** Ensure all necessary dependencies are installed.
-- **Build Errors:** Check the output of meson compile for specific error messages and resolve any issues.
+- **Build Errors:** Check the output of `meson compile` for specific error messages and resolve any issues.
 
 ### Contact for Support
 If you encounter any issues, feel free to open an issue on GitHub or contact the maintainer.
 
 ## License
-This project is licensed under the MIT License. See the ![LICENSE](LICENSE) file for details.
+This project is licensed under the GNU-GPLv3 License. See the ![LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 - **GTK Team:** For the fantastic GTK toolkit.
