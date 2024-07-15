@@ -5,8 +5,9 @@
 #include <gtk/gtk.h>
 #include "activate.h"
 
+// Print shutdown message on application exit
 static void shutdown(GtkApplication* app, gpointer user_data) {
-    printf("Application Closed!\n");
+    g_print("[-] Application has been shutdown!\n");
 }
 
 int main(int argc, char** argv) {
