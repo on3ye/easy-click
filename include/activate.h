@@ -3,5 +3,7 @@
 // @title: Activation Function Header File (activate.h)
 
 #include <gtk/gtk.h>
+#include "gui.h"
 
+// Activation Function declaration
 void activate(GtkApplication* app, gpointer user_data);
