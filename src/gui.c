@@ -1,3 +1,7 @@
+// @author: on3ye
+// @date: 13-07-2024 09:30
+// @title: GUI utilities and render function (gui.c)
+
 #include "gui.h"
 
 // Function to create and return a combo box with provided options
@@ -28,7 +32,7 @@ GtkWidget* create_two_labeled_buttons(const char* label1, const char* label2) {
     return box;
 }
 
-// Main function to render widgets in the window
+// Main widgets rendering function (-> window)
 void render_widgets(GtkWindow* window) {
     // Create main box for vertical layout
     GtkWidget* main_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 5);
@@ -46,7 +50,7 @@ void render_widgets(GtkWindow* window) {
     gtk_box_append(GTK_BOX(main_box), click_type_combo);
 
     // Mouse button combo box
-    const char* mouse_buttons[] = { "Left Button", "Right Button", "Both (Left & Right Buttons)" };
+    const char* mouse_buttons[] = { "Left Button", "Right Button", "Middle Button" };
     GtkWidget* mouse_button_label = gtk_label_new("Mouse Button:");
     GtkWidget* mouse_button_combo = create_combo_box_with_options(mouse_buttons, 3, 0);
     gtk_box_append(GTK_BOX(main_box), mouse_button_label);
@@ -68,11 +72,25 @@ void render_widgets(GtkWindow* window) {
     gtk_box_append(GTK_BOX(main_box), repeat_mode_label);
     gtk_box_append(GTK_BOX(main_box), repeat_mode_combo);
     gtk_box_append(GTK_BOX(main_box), number_of_clicks_box);
+    
+    // Create and Display Button on the main window and connect corresponding signals
+    WidgetsData* config = g_new(WidgetsData, 1);
+    config->w_click_type = click_type_combo;
+    config->w_mouse_button = mouse_button_combo;
+    config->w_click_interval = click_interval_box;
+    config->w_repeat_mode = repeat_mode_combo;
+    config-> w_num_clicks = number_of_clicks_box;
 
-    // Buttons
     GtkWidget* buttons_label = gtk_label_new("Control Buttons / Misc:");
     GtkWidget* control_buttons = create_two_labeled_buttons("Start", "Stop");
     GtkWidget* hotkeys_help_buttons = create_two_labeled_buttons("Start/Stop Hotkeys", "Need help?");
+    
+    GtkWidget* start_button = gtk_widget_get_first_child(control_buttons);
+    GtkWidget* stop_button = gtk_widget_get_last_child(control_buttons);
+
+    g_signal_connect(start_button, "clicked", G_CALLBACK(start_autoclicker), config);
+    g_signal_connect(stop_button, "clicked", G_CALLBACK(stop_autoclicker), NULL);
+
     gtk_box_append(GTK_BOX(main_box), buttons_label);
     gtk_box_append(GTK_BOX(main_box), control_buttons);
     gtk_box_append(GTK_BOX(main_box), hotkeys_help_buttons);
