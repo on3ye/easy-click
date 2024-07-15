@@ -1,6 +1,6 @@
 // @author: on3ye
 // @date: 13-07-2024 12:00
-// @title: Window Signals Header File (signals.h)
+// @title: Window signals functions callbacks (signals.c)
 
 #include "signals.h"
 
