@@ -61,11 +61,11 @@ meson compile -C builddir
 - src/activate.c: Main activation callback logic.
 - src/gui.c: Contains GUI utilities and render function.
 - src/signals.c: All signals functions callbacks.
-- src/autoclicker.c: Contains the main logic for performing clicks.
+- src/autoclick.c: Contains the main logic for performing clicks.
 - include/activate.h: Header file for `activate.c`.
 - include/gui.h: Header file for `gui.c`.
 - include/signals.h: Header file for `signals.c`.
-- include/autoclicker.h: Header file for `autoclicker.c`.
+- include/autoclick.h: Header file for `autoclick.c`.
 - meson.build: Build configuration file for Meson.
 
 ### Dependencies
