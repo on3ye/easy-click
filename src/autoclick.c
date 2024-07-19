@@ -42,7 +42,7 @@ typedef struct {
 ClickerData clicker_data;
 
 // Main click loop (ClickerData -> Autoclick Functionality)
-static gboolean click_loop(gpointer data) {
+gboolean click_loop(gpointer data) {
     // Break the click loop, based on some conditions provided by clicker_data
     if (!clicker_data.running || (!clicker_data.repeat_mode && clicker_data.click_count >= clicker_data.num_clicks)) {
         XCloseDisplay(clicker_data.display);

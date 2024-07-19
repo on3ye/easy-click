@@ -28,6 +28,6 @@ typedef struct {
 } WidgetsData;
 
 void perform_click(Display* display, int button);           // Click function defined based on user's OS
-static gboolean click_loop(gpointer data);                  // Main click loop (Used as GSourceFunc)
+gboolean click_loop(gpointer data);                  // Main click loop (Used as GSourceFunc)
 void start_autoclicker(GtkWidget *widget, gpointer data);   // Function to start the autoclicker
 void stop_autoclicker(GtkWidget *widget, gpointer data);    // Function to stop the autoclicker
